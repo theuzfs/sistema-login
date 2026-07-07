@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="page">
+        <section class="login-card">
+            <div class="logo">SL</div>
+
+            <h1>Sistema de Login</h1>
+
+            <div class="divider">
+                <span></span>
+                <strong>◆</strong>
+                <span></span>
+            </div>
+
+            <div id="login">
+                <label for="loginEmail">E-mail</label>
+                <div class="input-box">
+                    <input type="email" id="loginEmail" placeholder="Digite seu e-mail">
+                </div>
+
+                <label for="loginPassword">Senha</label>
+                <div class="input-box">
+                    <input type="password" id="loginPassword" placeholder="Digite sua senha">
+                </div>
+
+                <button class="primary-button" onclick="fazerLogin()">Entrar</button>
+
+                <p id="loginMessage" class="message"></p>
+
+                <div class="small-divider">
+                    <span></span>
+                    <strong>•</strong>
+                    <span></span>
+                </div>
+
+                <button class="secondary-button" onclick="mostrarCadastro()">Cadastre-se</button>
+                <button class="secondary-button" onclick="mostrarUsuarios()">Lista de usuários</button>
+            </div>
+
+            <div id="cadastro" class="hidden">
+                <h2>Cadastro</h2>
+
+                <label for="name">Nome</label>
+                <div class="input-box">
+                    <input type="text" id="name" placeholder="Digite seu nome">
+                </div>
+
+                <label for="registerEmail">E-mail</label>
+                <div class="input-box">
+                    <input type="email" id="registerEmail" placeholder="Digite seu e-mail">
+                </div>
+
+                <label for="registerPassword">Senha</label>
+                <div class="input-box">
+                    <input type="password" id="registerPassword" placeholder="Digite sua senha">
+                </div>
+
+                <button class="primary-button" onclick="cadastrarUsuario()">Cadastrar</button>
+                <button class="secondary-button" onclick="mostrarLogin()">Voltar ao login</button>
+
+                <p id="registerMessage" class="message"></p>
+            </div>
+
+            <div id="areaUsuario" class="hidden">
+                <h2>Área do Usuário</h2>
+
+                <p id="userInfo" class="user-info"></p>
+
+                <button class="primary-button" onclick="logout()">Sair</button>
+            </div>
+
+            <div id="usuarios" class="hidden">
+                <h2>Usuários cadastrados</h2>
+
+                <button class="primary-button" onclick="listarUsuarios()">Atualizar lista</button>
+                <button class="secondary-button" onclick="mostrarLogin()">Voltar ao login</button>
+
+                <ul id="usersList"></ul>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
